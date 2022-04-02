@@ -33,7 +33,7 @@ const Dashboard = () => {
     );
 
     return (
-        <Layout title="Dashboard" className="container-fluid">
+        <div title="Dashboard" className="container-fluid">
             <div className="row">
                 <div className="col-sm-3">
                     <UserLinks />
@@ -43,7 +43,7 @@ const Dashboard = () => {
                     <PurchaseHistory />
                 </div>
             </div>
-        </Layout>
+        </div>
     )
 }
 

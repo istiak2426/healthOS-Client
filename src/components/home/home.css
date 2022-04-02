@@ -1,0 +1,40 @@
+body {
+	margin: 0;
+	padding: 0;
+	height:1000px;
+   }
+
+
+
+.prodHead{
+	width: 100vw;
+	height: 25vh;
+	background-color: blue;
+	text-align: center;
+
+	color:white;
+	font-size: 1rem;
+}
+
+
+.tranleft{
+
+	text-align: center;
+
+	cursor: pointer;
+	
+}
+
+.tranRight{
+	/* margin-top: 1.5rem; */
+	text-align: center;
+	/* padding-left: 4rem; */
+	cursor: pointer;
+}
+
+.tranheadText{
+	text-align: center;
+	/* margin-top: 1.5rem;
+	padding-bottom: 0.5rem; */
+}
+

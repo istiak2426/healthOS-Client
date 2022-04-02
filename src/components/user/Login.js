@@ -82,7 +82,7 @@ const Login = () => {
         if (isAuthenticated()) return <Redirect to="/" />
     }
     return (
-        <Layout title="Login" className="container col-md-8 offset-md-2">
+        <div title="Login" className="container col-md-8 offset-md-2">
             {redirectUser()}
             {showLoading(loading)}
             {showError(error, error)}
@@ -90,7 +90,7 @@ const Login = () => {
             <hr />
             {signInForm()}
             <hr />
-        </Layout>
+        </div>
     );
 }
 

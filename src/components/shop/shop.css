@@ -1,0 +1,52 @@
+.shopHead{
+	width: 100vw;
+	height: 23vh;
+	background-color: blue;
+	text-align: center;
+
+	color:white;
+	font-size: 1rem;
+}
+
+
+.tranleft{
+
+	text-align: center;
+
+	cursor: pointer;
+	
+}
+
+.tranRight{
+	/* margin-top: 1.5rem; */
+	text-align: center;
+	/* padding-left: 4rem; */
+	cursor: pointer;
+}
+
+.share{
+		/* margin-top: 1.5rem; */
+		text-align: center;
+		/* padding-left: 4rem; */
+		cursor: pointer;
+}
+
+.tranheadText{
+	text-align: center;
+	/* margin-top: 1.5rem;
+	padding-bottom: 0.5rem; */
+}
+
+.shopHold
+{
+	background-color: whitesmoke;
+	color: grey;
+	border-radius: 1rem;
+	
+}
+
+.shopReceived{
+	background-color: whitesmoke;
+	color: grey;
+	border-radius: 1rem;
+}

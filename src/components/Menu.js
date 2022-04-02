@@ -3,11 +3,13 @@ import { signOut, isAuthenticated, userInfo } from "../utils/auth";
 
 const isActive = (history, path) => {
   if (history.location.pathname === path) {
-    return { color: "#ff9900" };
+    return { color: "blue" };
   } else {
     return { color: "grey" };
   }
 };
+
+
 
 const Menu = ({ history }) => {
   return (

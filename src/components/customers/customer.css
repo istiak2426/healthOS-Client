@@ -1,0 +1,42 @@
+
+
+.head{
+	width: 100vw;
+	height: 23vh;
+	background-color: blue;
+	text-align: center;
+
+	color:white;
+	font-size: 1rem;
+}
+
+
+.left{
+	margin-top: 2rem;
+	text-align: center;
+	padding-right: 4rem;
+	cursor: pointer;
+	
+}
+
+.headText{
+	text-align: center;
+	margin-top: 2rem;
+	padding-bottom: 0.5rem;
+
+	
+}
+
+.form{
+
+	padding-left: 3rem;
+	padding-right: 4rem;
+}
+
+
+
+
+
+
+
+

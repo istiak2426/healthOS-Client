@@ -1,0 +1,66 @@
+
+
+.head{
+	width: 100vw;
+	height: 23vh;
+	background-color: blue;
+	text-align: center;
+
+	color:white;
+	font-size: 1rem;
+}
+
+
+.right{
+	margin-top: 2rem;
+	text-align: center;
+	padding-right: 1rem;
+	cursor: pointer;
+	
+}
+
+.headText{
+	text-align: center;
+	margin-top: 2rem;
+	padding-bottom: 0.5rem;
+
+	
+}
+
+.orderForm{
+
+	padding-left: 5rem;
+	padding-right: 3rem;
+}
+
+.btn.active {
+	background-color: blue;
+	color:white;
+}
+
+.orderId h4{
+
+	/* padding-left: 1rem; */
+	font-weight: 400;
+}
+
+.status{
+	background-color: #e79887 ;
+	height: 2.5rem;
+	color: red;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 700;
+	border-radius: 0.5rem;
+	padding-top: 0.3rem;
+
+
+	
+}
+.details{
+	border: 1px solid black;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

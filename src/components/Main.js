@@ -9,10 +9,11 @@ import Dashboard from "./user/Dashboard";
 import AdminDashboard from "./admin/AdminDashboard";
 import CreateCategory from "./admin/CreateCategory";
 import CreateProduct from "./admin/CreateProduct";
-import Customers from "./Customers";
-import Orders from "./Orders";
-import Transaction from "./Transaction";
-import Shop from "./Shop";
+import Customers from '../components/customers/Customers'
+
+import Orders from '../components/orders/Orders'
+import Transaction from "../components/transaction/Transaction";
+import Shop from "../components/shop/Shop";
 
 const Main = () => {
   return (

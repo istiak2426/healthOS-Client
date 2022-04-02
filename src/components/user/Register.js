@@ -96,7 +96,7 @@ const Register = () => {
 
 
     return (
-        <Layout title="Register" className="container col-md-8 offset-md-2">
+        <div title="Register" className="container col-md-8 offset-md-2">
             {isAuthenticated() ? <Redirect to="/" /> : ""}
             {showSuccess()}
             {showLoading(loading)}
@@ -105,7 +105,7 @@ const Register = () => {
             <hr />
             {signUpForm()}
             <hr />
-        </Layout>
+        </div>
     );
 }
 

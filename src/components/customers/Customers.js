@@ -1,20 +1,29 @@
 import React from "react";
 import { useState } from "react";
-import { data } from "../utils/customerData";
-import Layout from "../components/Layout";
+import { data } from "../../utils/customerData";
+import Layout from "../Layout";
 
-
+import "./customer.css";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 const Customers = () => {
   const [user, setUser] = useState(data);
   const [value, setValue] = useState("");
 
   return (
-    <Layout title="Your customers" description="" classNameName="container">
-      <div class="col-md-6 col-lg-6 col-11 mx-auto my-auto search-box">
-        <h1>Your Customers</h1>
-        <br />
-        <div class="input-group form-container">
+    <div className="customers">
+    
+
+      <div className="container-fuild head">
+        <div className="row ">
+          <div className="col-2 left">
+            <ArrowBackIcon fontSize="large" s/>
+          </div>
+          <div className="col-8 headText">
+            <h2>My Customers</h2>
+          </div>
+        </div>
+        <div className="row form">
           <input
             type="text"
             name="search"
@@ -32,10 +41,10 @@ const Customers = () => {
         .filter((v) => v.name.toLowerCase().includes(value.toLowerCase()))
         .map((u) => {
           return (
-            <div className="container-fluid mt-5" key={u.id}>
-              <div className="row text-center">
-                <div className="col-10 col-md-4 mt-5">
-                  <div className="card p-2">
+            <>
+              <div className="row  ">
+                <div className="col-12 ">
+                  <div className="card p-5 " >
                     <div className="d-flex align-items-center">
                       <div className="image">
                         {" "}
@@ -46,7 +55,7 @@ const Customers = () => {
                         />{" "}
                       </div>
                       <div className="ml-3 w-100">
-                        <h4 className="mb-0 mt-0 textLeft">{u.name} </h4>
+                        <h4 className="mb-0 mt-0 textLeft" style={{fontWeight:"bold"}}>{u.name.toLocaleUpperCase()} </h4>
 
                         <div className="d-flex flex-column">
                           <span className="number1">{u.orders} orders</span>{" "}
@@ -56,10 +65,10 @@ const Customers = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </>
           );
         })}
-    </Layout>
+    </div>
   );
 };
 
