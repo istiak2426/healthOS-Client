@@ -61,6 +61,7 @@ const Footer = ({ history }) => (
               <div className="col-md-2 col-lg-2 col-sm-2 ">
                 <AccountBalanceWalletOutlinedIcon
                   style={{ fontSize: "32px" }}
+                  className='ml-2'
                 />
                 <h6 style={{ color: "grey" }}>Orders</h6>
               </div>

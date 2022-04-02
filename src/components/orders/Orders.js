@@ -55,6 +55,8 @@ const Orders = () => {
         </div>
       </div>
 
+      <br/>
+
       <div className="container-fluid" style={{ textAlign: "center" }}>
         <button
           style={{ margin: "16px", cursor: "pointer", borderRadius: "2rem" }}
@@ -81,6 +83,9 @@ const Orders = () => {
           Yesterday ({yesterdayOrder.length})
         </button>
       </div>
+
+      <br/>
+      <br/>
 
       {orders
         .filter(
