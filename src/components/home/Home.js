@@ -18,6 +18,9 @@ const Home = () => {
 
   const [value, setValue] = useState("");
 
+  const [change, setChange] = useState("");
+
+
   useEffect(() => {
     getProducts()
       .then((response) => {
@@ -29,6 +32,46 @@ const Home = () => {
       .then((response) => setCategories(response.data))
       .catch((err) => setError("Failed to load categories!"));
   }, []);
+
+  const prod = products.filter((v) => {
+    return v.name.toLowerCase().includes(value.toLowerCase());
+  }).map((product) => <Card product={product} key={product._id} />)
+
+  const cat = categories.map((c)=>{
+    return (<>
+    <h2>Category name : {c.name}</h2></>)
+  })
+
+
+  const handleCatalogue = (name) =>{
+    setChange(name);
+
+  }
+
+
+  console.log(change);
+
+
+  let list = (
+    <>{prod}</>
+    );
+  if(change === 'products'){
+    list = (
+    <>{prod}</>
+    )
+
+  }
+
+  else if (change === 'categories'){
+    list = (
+    <>
+    {cat}
+    </>)
+  }
+
+
+
+
 
   return (
     <div className="home">
@@ -48,9 +91,12 @@ const Home = () => {
         </div>
 
         <div className="row  pt-4">
-          <div
+          <button
             className="col-md-6 col-lg-6 col-6 mx-auto my-auto tranheadText"
             style={{ cursor: "pointer" }}
+            onClick={()=>handleCatalogue('products')}
+            
+
           >
             <h4>Products</h4>
             <hr
@@ -59,15 +105,16 @@ const Home = () => {
                 height: 2,
               }}
             />
-          </div>
+          </button>
 
-          <div
+          <button
             className="col-md-6 col-lg-6 col-6 mx-auto my-auto tranRight"
             style={{ cursor: "pointer" }}
+            onClick={()=>handleCatalogue('categories')}
           >
             <h4>Catagories</h4>
             <hr />
-          </div>
+          </button>
         </div>
       </div>
 
@@ -78,12 +125,7 @@ const Home = () => {
         {showSuccess(success, "Added to cart successfully!")}
       </div>
       <div className="row">
-        {products &&
-          products
-            .filter((v) => {
-              return v.name.toLowerCase().includes(value.toLowerCase());
-            })
-            .map((product) => <Card product={product} key={product._id} />)}
+      {list}
       </div>
 
     
